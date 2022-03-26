@@ -1,0 +1,14 @@
+[Unit]
+Description=HLSStream
+After=network.target
+
+[Service]
+ExecStart=sudo /usr/bin/python3 -u main.py
+WorkingDirectory=/home/pi/stream
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
